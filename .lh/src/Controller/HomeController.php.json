@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/Controller/HomeController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1746537515330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1746537767899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n <?php\n \n+namespace App/Controller;\n+use Symfony\\Component\\Routing\\Attribute\\Route;\n+\n class HomeController\n {\n+ #[Router('/')]\n   public function index(){\n    echo \"Hello from a controller\";\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746537774694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace App/Controller;\n+\n use Symfony\\Component\\Routing\\Attribute\\Route;\n \n class HomeController\n {\n"
+                },
+                {
+                    "date": 1746537782511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace App/Controller;\n+namespace App\\Controller;\n \n use Symfony\\Component\\Routing\\Attribute\\Route;\n \n class HomeController\n"
+                },
+                {
+                    "date": 1746537836179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n use Symfony\\Component\\Routing\\Attribute\\Route;\n \n class HomeController\n {\n- #[Router('/')]\n+ #[Route('/')]\n   public function index(){\n    echo \"Hello from a controller\";\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746537982169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,13 @@\n \n namespace App\\Controller;\n \n use Symfony\\Component\\Routing\\Attribute\\Route;\n+use Symfony\\Component\\Routing\\HttpFoundation\\Response;\n \n class HomeController\n {\n  #[Route('/')]\n-  public function index(){\n+  public function index():Response{\n    echo \"Hello from a controller\";\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746538013356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n class HomeController\n {\n  #[Route('/')]\n   public function index():Response{\n-   echo \"Hello from a controller\";\n+   return new Response(\"Hello from a controller\");\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746538066513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n namespace App\\Controller;\n \n use Symfony\\Component\\Routing\\Attribute\\Route;\n-use Symfony\\Component\\Routing\\HttpFoundation\\Response;\n+use Symfony\\Component\\HttpFoundation\\Response;\n \n class HomeController\n {\n  #[Route('/')]\n"
+                }
+            ],
+            "date": 1746537515330,
+            "name": "Commit-0",
+            "content": "<?php\n\nclass HomeController\n{\n  public function index(){\n   echo \"Hello from a controller\";\n  }\n}"
+        }
+    ]
+}
