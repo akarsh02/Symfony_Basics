@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1746537515330,
@@ -36,6 +36,26 @@
                 {
                     "date": 1746538066513,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n namespace App\\Controller;\n \n use Symfony\\Component\\Routing\\Attribute\\Route;\n-use Symfony\\Component\\Routing\\HttpFoundation\\Response;\n+use Symfony\\Component\\HttpFoundation\\Response;\n \n class HomeController\n {\n  #[Route('/')]\n"
+                },
+                {
+                    "date": 1746540126662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n <?php\n \n namespace App\\Controller;\n \n+use Symfony\\Bundle\\FramewrokBundle\\Controller\\AbstractController; //to load twig file\n use Symfony\\Component\\Routing\\Attribute\\Route;\n use Symfony\\Component\\HttpFoundation\\Response;\n \n class HomeController\n {\n  #[Route('/')]\n   public function index():Response{\n-   return new Response(\"Hello from a controller\");\n+   $content = $this->renderView('home/index.html.twig')\n+   return new Response($content);\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746540161876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n class HomeController\n {\n  #[Route('/')]\n   public function index():Response{\n-   $content = $this->renderView('home/index.html.twig')\n+   $content = $this->renderView('home/index.html.twig');\n    return new Response($content);\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746540243437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n use Symfony\\Bundle\\FramewrokBundle\\Controller\\AbstractController; //to load twig file\n use Symfony\\Component\\Routing\\Attribute\\Route;\n use Symfony\\Component\\HttpFoundation\\Response;\n \n-class HomeController\n+class HomeController extends AbstractController\n {\n  #[Route('/')]\n   public function index():Response{\n    $content = $this->renderView('home/index.html.twig');\n"
+                },
+                {
+                    "date": 1746540357248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n namespace App\\Controller;\n \n-use Symfony\\Bundle\\FramewrokBundle\\Controller\\AbstractController; //to load twig file\n+use Symfony\\Bundle\\FramewrokBundle\\Controller\\AbstractController;//to load twig file\n use Symfony\\Component\\Routing\\Attribute\\Route;\n use Symfony\\Component\\HttpFoundation\\Response;\n \n class HomeController extends AbstractController\n"
+                },
+                {
+                    "date": 1746540388824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n namespace App\\Controller;\n \n-use Symfony\\Bundle\\FramewrokBundle\\Controller\\AbstractController;//to load twig file\n+use Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController;//to load twig file\n use Symfony\\Component\\Routing\\Attribute\\Route;\n use Symfony\\Component\\HttpFoundation\\Response;\n \n class HomeController extends AbstractController\n"
                 }
             ],
             "date": 1746537515330,
