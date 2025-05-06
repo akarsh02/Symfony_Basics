@@ -3,11 +3,31 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1746538901716,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1746540903576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n+{% extends 'base.html.twig' %}\n <h1>Welcome</h1>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746540936100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,5 @@\n {% extends 'base.html.twig' %}\n+\n+{% block body %}\n+\n <h1>Welcome</h1>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746541041836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n {% extends 'base.html.twig' %}\n \n {% block body %}\n \n-<h1>Welcome</h1>\n\\ No newline at end of file\n+<h1>Welcome</h1>\n+{% bndblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746541057828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n \n {% block body %}\n \n <h1>Welcome</h1>\n-{% bndblock %}\n\\ No newline at end of file\n+{% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746541084104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %}\n+{% block body %} //name of the block we want to insert\n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1746538901716,

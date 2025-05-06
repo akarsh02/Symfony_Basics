@@ -9,8 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 class HomeController extends AbstractController
 {
  #[Route('/')]
-  public function index():Response{
-   $content = $this->renderView('home/index.html.twig');
-   return new Response($content);
+  public function index():Response
+  {
+   return $this->render('home/index.html.twig');
   }
 }
