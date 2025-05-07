@@ -1,0 +1,34 @@
+{
+    "sourceFile": "templates/product/show.html.twig",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1746612837326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1746612874959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,7 @@\n-{% extends 'base.html.twig' %}\n\\ No newline at end of file\n+{% extends 'base.html.twig' %}\n+\n+{% block body %}\n+\n+<h1>Product</h1>\n+\n+{% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746613161945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,10 @@\n {% block body %}\n \n <h1>Product</h1>\n \n+{%product.name%}\n+{%product.description%}\n+{%product.size%}\n+\n+\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746613269580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n {% block body %}\n \n <h1>Product</h1>\n \n-{%product.name%}\n-{%product.description%}\n-{%product.size%}\n+{product.name}\n+{product.description}\n+{product.size}\n \n \n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746613291986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n {% block body %}\n \n <h1>Product</h1>\n \n-{product.name}\n-{product.description}\n-{product.size}\n+{{product.name}}\n+{{product.description}}\n+{{product.size}}\n \n \n {% endblock %}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1746612837326,
+            "name": "Commit-0",
+            "content": "{% extends 'base.html.twig' %}"
+        }
+    ]
+}

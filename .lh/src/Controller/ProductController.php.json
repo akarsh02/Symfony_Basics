@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1746601348393,
@@ -40,6 +40,42 @@
                 {
                     "date": 1746611964449,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n     #[Route('/product', name: 'product_index')]\n     public function index(ProductRepository $repository): Response\n     {\n         return $this->render('product/index.html.twig', [\n-            'controller_name' => $repository->findAll(),\n+            'products' => $repository->findAll(),\n         ]);\n     }\n }\n"
+                },
+                {
+                    "date": 1746612625520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,10 @@\n         return $this->render('product/index.html.twig', [\n             'products' => $repository->findAll(),\n         ]);\n     }\n+    #[Route('/product/{id}')]\n+    public function show($id):Response\n+    {\n+        dd($id)\n+    }\n }\n"
+                },
+                {
+                    "date": 1746612643611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,7 @@\n     }\n     #[Route('/product/{id}')]\n     public function show($id):Response\n     {\n-        dd($id)\n+        dd($id);\n     }\n }\n"
+                },
+                {
+                    "date": 1746612909763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,7 @@\n     }\n     #[Route('/product/{id}')]\n     public function show($id):Response\n     {\n-        dd($id);\n+        return $this->render('product/show.html.twig')\n     }\n }\n"
+                },
+                {
+                    "date": 1746613008625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,10 @@\n     }\n     #[Route('/product/{id}')]\n     public function show($id):Response\n     {\n-        return $this->render('product/show.html.twig')\n+        $product = ...\n+        return $this->render('product/show.html.twig',[\n+            'product' => $product;\n+        ]);\n     }\n }\n"
+                },
+                {
+                    "date": 1746613013698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n     #[Route('/product/{id}')]\n     public function show($id):Response\n     {\n         $product = ...\n+        \n         return $this->render('product/show.html.twig',[\n             'product' => $product;\n         ]);\n     }\n"
+                },
+                {
+                    "date": 1746613099090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,12 +16,12 @@\n             'products' => $repository->findAll(),\n         ]);\n     }\n     #[Route('/product/{id}')]\n-    public function show($id):Response\n+    public function show($id,ProductRepository $repository):Response\n     {\n-        $product = ...\n-        \n+        $product = $repository->findOneBy(['id'=>$$id])\n+\n         return $this->render('product/show.html.twig',[\n             'product' => $product;\n         ]);\n     }\n"
+                },
+                {
+                    "date": 1746613111843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,11 @@\n     }\n     #[Route('/product/{id}')]\n     public function show($id,ProductRepository $repository):Response\n     {\n-        $product = $repository->findOneBy(['id'=>$$id])\n+        $product = $repository->findOneBy(['id'=>$$id]);\n \n-        return $this->render('product/show.html.twig',[\n+        return $this->render('product/show.html.twig', [\n             'product' => $product;\n         ]);\n     }\n }\n"
+                },
+                {
+                    "date": 1746613128421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,8 @@\n     {\n         $product = $repository->findOneBy(['id'=>$$id]);\n \n         return $this->render('product/show.html.twig', [\n-            'product' => $product;\n+            'product' => $product,\n         ]);\n     }\n }\n"
+                },
+                {
+                    "date": 1746613251041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     }\n     #[Route('/product/{id}')]\n     public function show($id,ProductRepository $repository):Response\n     {\n-        $product = $repository->findOneBy(['id'=>$$id]);\n+        $product = $repository->find($id);\n \n         return $this->render('product/show.html.twig', [\n             'product' => $product,\n         ]);\n"
                 }
             ],
             "date": 1746601348392,
