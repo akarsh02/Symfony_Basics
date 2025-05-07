@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1746601348393,
@@ -28,6 +28,18 @@
                 {
                     "date": 1746611047781,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     #[Route('/product', name: 'product_index')]\n     public function index(ProductRepository $repository): Response\n     {\n         $products = $repository->findAll();\n-        dump($products)\n+        dump($products);\n         return $this->render('product/index.html.twig', [\n             'controller_name' => 'ProductController',\n         ]);\n     }\n"
+                },
+                {
+                    "date": 1746611263424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,9 @@\n {\n     #[Route('/product', name: 'product_index')]\n     public function index(ProductRepository $repository): Response\n     {\n-        $products = $repository->findAll();\n-        dump($products);\n         return $this->render('product/index.html.twig', [\n-            'controller_name' => 'ProductController',\n+            'controller_name' => $repository->findAll();\n         ]);\n     }\n }\n"
+                },
+                {
+                    "date": 1746611276459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n     #[Route('/product', name: 'product_index')]\n     public function index(ProductRepository $repository): Response\n     {\n         return $this->render('product/index.html.twig', [\n-            'controller_name' => $repository->findAll();\n+            'controller_name' => $repository->findAll(),\n         ]);\n     }\n }\n"
+                },
+                {
+                    "date": 1746611964449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n     #[Route('/product', name: 'product_index')]\n     public function index(ProductRepository $repository): Response\n     {\n         return $this->render('product/index.html.twig', [\n-            'controller_name' => $repository->findAll(),\n+            'products' => $repository->findAll(),\n         ]);\n     }\n }\n"
                 }
             ],
             "date": 1746601348392,

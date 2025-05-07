@@ -1,0 +1,46 @@
+{
+    "sourceFile": "templates/product/index.html.twig",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1746611600236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1746611619834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \n {% block title %}Hello ProductController!{% endblock %}\n \n {% block body %}\n-        <h1>{product.name}</h1>\n+       {% <h1>product.name</h1>%}\n {% endblock %}\n"
+                },
+                {
+                    "date": 1746611647012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \n {% block title %}Hello ProductController!{% endblock %}\n \n {% block body %}\n-       {% <h1>product.name</h1>%}\n+       <h1>Product</h1>\n {% endblock %}\n"
+                },
+                {
+                    "date": 1746611754550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,16 @@\n {% block title %}Hello ProductController!{% endblock %}\n \n {% block body %}\n        <h1>Product</h1>\n+       <table>\n+       <thead>\n+       <tr>\n+            <th>Name</th>\n+            <th>Description</th>\n+            <th>Size</th>\n+        </tr>\n+        </thead>\n+        <tbody>\n+        </tbody>\n+        </table>\n {% endblock %}\n"
+                },
+                {
+                    "date": 1746611899072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,12 @@\n         </tr>\n         </thead>\n         <tbody>\n         </tbody>\n+        {% for product in products %}\n+        <tr>\n+                <td>{{product.name}}</td>\n+                <td>{{product.description}}</td>\n+                <td>{{product.Size}}</td>\n+                </tr>\n         </table>\n {% endblock %}\n"
+                },
+                {
+                    "date": 1746611909445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,7 @@\n         <tr>\n                 <td>{{product.name}}</td>\n                 <td>{{product.description}}</td>\n                 <td>{{product.Size}}</td>\n-                </tr>\n+        </tr>\n         </table>\n {% endblock %}\n"
+                },
+                {
+                    "date": 1746611923425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n         {% for product in products %}\n         <tr>\n                 <td>{{product.name}}</td>\n                 <td>{{product.description}}</td>\n-                <td>{{product.Size}}</td>\n+                <td>{{product.size}}</td>\n         </tr>\n         </table>\n {% endblock %}\n"
+                },
+                {
+                    "date": 1746611943136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,7 @@\n                 <td>{{product.name}}</td>\n                 <td>{{product.description}}</td>\n                 <td>{{product.size}}</td>\n         </tr>\n+        {% endfor %}\n         </table>\n {% endblock %}\n"
+                }
+            ],
+            "date": 1746611600236,
+            "name": "Commit-0",
+            "content": "{% extends 'base.html.twig' %}\n\n{% block title %}Hello ProductController!{% endblock %}\n\n{% block body %}\n        <h1>{product.name}</h1>\n{% endblock %}\n"
+        }
+    ]
+}
