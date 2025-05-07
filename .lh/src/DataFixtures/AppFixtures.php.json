@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/DataFixtures/AppFixtures.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1746603971550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1746604007157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,11 @@\n     {\n         $product = new Product();\n         $product->setName(\"Product One\");\n         $product->setDescription(\"This is the first project\");\n-        $product->setSize(20);\n+        $product->setSize(200);\n \n         $manager->persist($product)\n-\n+        \n         $manager->flush();\n     }\n }\n"
+                },
+                {
+                    "date": 1746604789926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,8 @@\n         $product->setName(\"Product One\");\n         $product->setDescription(\"This is the first project\");\n         $product->setSize(200);\n \n-        $manager->persist($product)\n-        \n+        $manager->persist($product);\n         $manager->flush();\n     }\n }\n"
+                },
+                {
+                    "date": 1746607121268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n namespace App\\DataFixtures;\n \n use Doctrine\\Bundle\\FixturesBundle\\Fixture;\n use Doctrine\\Persistence\\ObjectManager;\n+use App\\Entity\\Product;\n \n class AppFixtures extends Fixture\n {\n     public function load(ObjectManager $manager): void\n"
+                },
+                {
+                    "date": 1746607393495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     {\n         $product = new Product();\n         $product->setName(\"Product One\");\n         $product->setDescription(\"This is the first project\");\n-        $product->setSize(200);\n+        $product->setSize(100);\n \n         $manager->persist($product);\n         $manager->flush();\n     }\n"
+                },
+                {
+                    "date": 1746607443097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,14 @@\n         $product->setDescription(\"This is the first project\");\n         $product->setSize(100);\n \n         $manager->persist($product);\n+\n+        $product = new Product();\n+        $product->setName(\"Product Two\");\n+        $product->setDescription(\"This is the second project\");\n+        $product->setSize(200);\n+\n+        $manager->persist($product);\n         $manager->flush();\n     }\n }\n"
+                }
+            ],
+            "date": 1746603971550,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\DataFixtures;\n\nuse Doctrine\\Bundle\\FixturesBundle\\Fixture;\nuse Doctrine\\Persistence\\ObjectManager;\n\nclass AppFixtures extends Fixture\n{\n    public function load(ObjectManager $manager): void\n    {\n        $product = new Product();\n        $product->setName(\"Product One\");\n        $product->setDescription(\"This is the first project\");\n        $product->setSize(20);\n\n        $manager->persist($product)\n\n        $manager->flush();\n    }\n}\n"
+        }
+    ]
+}

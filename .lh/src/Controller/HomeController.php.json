@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1746537515330,
@@ -64,6 +64,10 @@
                 {
                     "date": 1746540664896,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n \n class HomeController extends AbstractController\n {\n  #[Route('/')]\n-  public function index():Response{\n-   return = $this->render('home/index.html.twig');\n+  public function index():Response\n+  {\n+   return $this->render('home/index.html.twig');\n \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746586332313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,6 @@\n  #[Route('/')]\n   public function index():Response\n   {\n    return $this->render('home/index.html.twig');\n-\n   }\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1746537515330,

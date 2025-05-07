@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 20,
             "patches": [
                 {
                     "date": 1746538901716,
@@ -28,6 +28,66 @@
                 {
                     "date": 1746541084104,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %}\n+{% block body %} //name of the block we want to insert\n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746586326837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %} //name of the block we want to insert\n+{% block title %} //name of the block we want to insert\n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746586400316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n \n {% block title %} //name of the block we want to insert\n \n <h1>Welcome</h1>\n-{% endblock %}\n\\ No newline at end of file\n+{% endtitle %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746586414967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block title %} //name of the block we want to insert\n+{% block body %} //name of the block we want to insert\n \n <h1>Welcome</h1>\n\\ No newline at end of file\n-{% endtitle %}\n+{% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746586435873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %} //name of the block we want to insert\n+{% block body %}               //name of the block we want to insert\n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746586449697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %}               //name of the block we want to insert\n+{% block body %}               \n+//name of the block we want to insert\n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746586470779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %}               \n-//name of the block we want to insert\n+{% block body %} //name of the block we want to insert to\n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746586477407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %} //name of the block we want to insert to\n+{% block body %} //name of the block we want to insert\n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746596773015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %} //name of the block we want to insert\n+{% block body %} \n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746596781482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %} \n+{% block body %} //name of the block we want to insert\n \n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746596853178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n {% extends 'base.html.twig' %}\n \n-{% block body %} //name of the block we want to insert\n+#name of the block we want to insert\n \n+{% block body %} \n+\n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746596874081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n {% extends 'base.html.twig' %}\n \n-#name of the block we want to insert\n \n-{% block body %} \n \n+{% block body %} #name of the block we want to insert\n+\n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746596886190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n {% extends 'base.html.twig' %}\n \n+#name of the block we want to insert\n \n+{% block body %} \n \n-{% block body %} #name of the block we want to insert\n-\n <h1>Welcome</h1>\n {% endblock %}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1746596904722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {% extends 'base.html.twig' %}\n \n-#name of the block we want to insert\n+// name of the block we want to insert\n \n {% block body %} \n \n <h1>Welcome</h1>\n"
+                },
+                {
+                    "date": 1746596954330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {% extends 'base.html.twig' %}\n \n-// name of the block we want to insert\n+{# name of the block we want to insert #}\n \n {% block body %} \n \n <h1>Welcome</h1>\n"
+                },
+                {
+                    "date": 1746601546140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n \n {% block body %} \n \n <h1>Welcome</h1>\n+<a href=\"/product\"> Products </a>\n {% endblock %}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1746538901716,
